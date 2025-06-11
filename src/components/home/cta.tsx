@@ -21,13 +21,13 @@ export function CallToActionSection() {
 					<div className='absolute bottom-2 right-2 w-4 h-4 bg-white/40 rounded-full'></div>
 				</div>
 			</div>
-			<div className='absolute top-20 right-16 animate-bounce-slow delay-1000'>
+			<div className='absolute top-20 right-16 animate-bounce-slow-delay-1'>
 				<div className='w-12 h-12 bg-yellow-500/30 rounded-xl shadow-2xl transform -rotate-6'>
 					<div className='absolute top-1 left-3 w-3 h-3 bg-white/40 rounded-full'></div>
 					<div className='absolute bottom-1 left-3 w-3 h-3 bg-white/40 rounded-full'></div>
 				</div>
 			</div>
-			<div className='absolute bottom-16 left-20 animate-bounce-slow delay-2000'>
+			<div className='absolute bottom-16 left-20 animate-bounce-slow-delay-2'>
 				<div className='w-10 h-10 bg-blue-500/30 rounded-lg shadow-2xl transform rotate-45'>
 					<div className='absolute top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white/40 rounded-full'></div>
 				</div>
@@ -41,8 +41,8 @@ export function CallToActionSection() {
 						<div className='flex items-center mb-8'>
 							<div className='flex space-x-2 mr-4'>
 								<div className='w-4 h-4 bg-white/60 rounded-full animate-pulse'></div>
-								<div className='w-4 h-4 bg-white/60 rounded-full animate-pulse delay-100'></div>
-								<div className='w-4 h-4 bg-white/60 rounded-full animate-pulse delay-200'></div>
+								<div className='w-4 h-4 bg-white/60 rounded-full animate-pulse animate-pulse-delay-1'></div>
+								<div className='w-4 h-4 bg-white/60 rounded-full animate-pulse animate-pulse-delay-2'></div>
 							</div>
 							<span className='text-white/80 text-sm font-bold uppercase tracking-wider'>
 								Join the LEGO® Community
@@ -160,15 +160,15 @@ export function CallToActionSection() {
 				<div className='mt-16 flex justify-center'>
 					<div className='flex space-x-3'>
 						<div className='w-3 h-3 bg-red-400/60 rounded-full animate-pulse'></div>
-						<div className='w-3 h-3 bg-yellow-400/60 rounded-full animate-pulse delay-100'></div>
-						<div className='w-3 h-3 bg-blue-400/60 rounded-full animate-pulse delay-200'></div>
-						<div className='w-3 h-3 bg-green-400/60 rounded-full animate-pulse delay-300'></div>
+						<div className='w-3 h-3 bg-yellow-400/60 rounded-full animate-pulse animate-pulse-delay-1'></div>
+						<div className='w-3 h-3 bg-blue-400/60 rounded-full animate-pulse animate-pulse-delay-2'></div>
+						<div className='w-3 h-3 bg-green-400/60 rounded-full animate-pulse animate-pulse-delay-3'></div>
 					</div>
 				</div>
 			</div>
 
-			{/* CSS анимации */}
-			<style jsx>{`
+			{/* CSS анимации - убрали jsx атрибут */}
+			<style>{`
 				@keyframes bounce-slow {
 					0%, 100% { transform: translateY(0px) rotate(0deg); }
 					50% { transform: translateY(-15px) rotate(3deg); }
@@ -180,8 +180,25 @@ export function CallToActionSection() {
 				.animate-bounce-slow {
 					animation: bounce-slow 4s ease-in-out infinite;
 				}
+				.animate-bounce-slow-delay-1 {
+					animation: bounce-slow 4s ease-in-out infinite;
+					animation-delay: 1s;
+				}
+				.animate-bounce-slow-delay-2 {
+					animation: bounce-slow 4s ease-in-out infinite;
+					animation-delay: 2s;
+				}
 				.animate-spin-slow {
 					animation: spin-slow 8s linear infinite;
+				}
+				.animate-pulse-delay-1 {
+					animation-delay: 0.1s;
+				}
+				.animate-pulse-delay-2 {
+					animation-delay: 0.2s;
+				}
+				.animate-pulse-delay-3 {
+					animation-delay: 0.3s;
 				}
 				.shadow-3xl {
 					box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);

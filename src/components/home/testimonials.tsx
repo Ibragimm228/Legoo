@@ -24,6 +24,24 @@ const TESTIMONIALS = [
 export function TestimonialsSection() {
 	return (
 		<section className='relative py-24 sm:py-32 overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
+			{/* CSS анимации - перенесены в начало */}
+			<style>{`
+				@keyframes orbit {
+					0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+					100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+				}
+				@keyframes twinkle {
+					0%, 100% { opacity: 0.3; transform: scale(1); }
+					50% { opacity: 1; transform: scale(1.5); }
+				}
+				.animate-orbit {
+					animation: orbit 20s linear infinite;
+				}
+				.animate-twinkle {
+					animation: twinkle 3s ease-in-out infinite;
+				}
+			`}</style>
+
 			{/* Космический LEGO-фон */}
 			<div className='absolute inset-0'>
 				<div className='absolute inset-0 bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-pink-600/10'></div>
@@ -278,24 +296,6 @@ export function TestimonialsSection() {
 					</div>
 				</div>
 			</div>
-
-			{/* CSS анимации */}
-			<style jsx>{`
-				@keyframes orbit {
-					0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
-					100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
-				}
-				@keyframes twinkle {
-					0%, 100% { opacity: 0.3; transform: scale(1); }
-					50% { opacity: 1; transform: scale(1.5); }
-				}
-				.animate-orbit {
-					animation: orbit 20s linear infinite;
-				}
-				.animate-twinkle {
-					animation: twinkle 3s ease-in-out infinite;
-				}
-			`}</style>
 		</section>
 	)
 }

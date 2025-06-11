@@ -1,6 +1,29 @@
 export function NotFoundPage() {
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 relative overflow-hidden flex items-center justify-center'>
+			{/* CSS анимации - перенесены в начало */}
+			<style>{`
+				@keyframes float-broken {
+					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+					25% { transform: translateY(-20px) rotate(15deg) scale(1.1); }
+					50% { transform: translateY(-40px) rotate(-10deg) scale(0.9); }
+					75% { transform: translateY(-15px) rotate(25deg) scale(1.05); }
+				}
+				@keyframes twinkle {
+					0%, 100% { opacity: 0.3; transform: scale(1); }
+					50% { opacity: 1; transform: scale(1.5); }
+				}
+				.animate-float-broken {
+					animation: float-broken 8s ease-in-out infinite;
+				}
+				.animate-twinkle {
+					animation: twinkle 3s ease-in-out infinite;
+				}
+				.shadow-3xl {
+					box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+				}
+			`}</style>
+
 			{/* Космический LEGO-фон */}
 			<div className='absolute inset-0 pointer-events-none'>
 				{/* Звездное поле */}
@@ -254,29 +277,6 @@ export function NotFoundPage() {
 					</div>
 				</div>
 			</section>
-
-			{/* CSS анимации */}
-			<style jsx>{`
-				@keyframes float-broken {
-					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-					25% { transform: translateY(-20px) rotate(15deg) scale(1.1); }
-					50% { transform: translateY(-40px) rotate(-10deg) scale(0.9); }
-					75% { transform: translateY(-15px) rotate(25deg) scale(1.05); }
-				}
-				@keyframes twinkle {
-					0%, 100% { opacity: 0.3; transform: scale(1); }
-					50% { opacity: 1; transform: scale(1.5); }
-				}
-				.animate-float-broken {
-					animation: float-broken 8s ease-in-out infinite;
-				}
-				.animate-twinkle {
-					animation: twinkle 3s ease-in-out infinite;
-				}
-				.shadow-3xl {
-					box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
-				}
-			`}</style>
 		</div>
 	)
 }

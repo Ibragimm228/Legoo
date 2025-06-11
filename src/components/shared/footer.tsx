@@ -14,6 +14,24 @@ export function Footer() {
 
 	return (
 		<footer className="relative bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
+			{/* CSS анимации - перенесены в начало */}
+			<style>{`
+				@keyframes float-footer {
+					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+					50% { transform: translateY(-10px) rotate(3deg) scale(1.05); }
+				}
+				@keyframes twinkle {
+					0%, 100% { opacity: 0.3; transform: scale(1); }
+					50% { opacity: 1; transform: scale(1.5); }
+				}
+				.animate-float-footer {
+					animation: float-footer 6s ease-in-out infinite;
+				}
+				.animate-twinkle {
+					animation: twinkle 3s ease-in-out infinite;
+				}
+			`}</style>
+
 			{/* Космический LEGO-фон */}
 			<div className='absolute inset-0 pointer-events-none'>
 				{/* Звездное поле */}
@@ -253,24 +271,6 @@ export function Footer() {
 					</div>
 				</div>
 			</Container>
-
-			{/* CSS анимации */}
-			<style jsx>{`
-				@keyframes float-footer {
-					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-					50% { transform: translateY(-10px) rotate(3deg) scale(1.05); }
-				}
-				@keyframes twinkle {
-					0%, 100% { opacity: 0.3; transform: scale(1); }
-					50% { opacity: 1; transform: scale(1.5); }
-				}
-				.animate-float-footer {
-					animation: float-footer 6s ease-in-out infinite;
-				}
-				.animate-twinkle {
-					animation: twinkle 3s ease-in-out infinite;
-				}
-			`}</style>
 		</footer>
 	)
 }

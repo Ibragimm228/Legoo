@@ -12,6 +12,32 @@ export function BlogPage() {
 	if (isLoading) {
 		return (
 			<div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 flex items-center justify-center'>
+				{/* CSS анимации - перенесены в начало */}
+				<style>{`
+					@keyframes float-orbit {
+						0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+						33% { transform: translateY(-25px) rotate(8deg) scale(1.1); }
+						66% { transform: translateY(-10px) rotate(-5deg) scale(0.9); }
+					}
+					@keyframes twinkle {
+						0%, 100% { opacity: 0.3; transform: scale(1); }
+						50% { opacity: 1; transform: scale(1.5); }
+					}
+					@keyframes spin-slow {
+						from { transform: rotate(0deg); }
+						to { transform: rotate(360deg); }
+					}
+					.animate-float-orbit {
+						animation: float-orbit 15s ease-in-out infinite;
+					}
+					.animate-twinkle {
+						animation: twinkle 3s ease-in-out infinite;
+					}
+					.animate-spin-slow {
+						animation: spin-slow 20s linear infinite;
+					}
+				`}</style>
+
 				{/* LEGO-стилизованный загрузочный экран */}
 				<div className='relative'>
 					{/* Плавающие LEGO-элементы при загрузке */}
@@ -71,6 +97,32 @@ export function BlogPage() {
 	if (isError) {
 		return (
 			<div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 flex items-center justify-center'>
+				{/* CSS анимации для экрана ошибки */}
+				<style>{`
+					@keyframes float-orbit {
+						0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+						33% { transform: translateY(-25px) rotate(8deg) scale(1.1); }
+						66% { transform: translateY(-10px) rotate(-5deg) scale(0.9); }
+					}
+					@keyframes twinkle {
+						0%, 100% { opacity: 0.3; transform: scale(1); }
+						50% { opacity: 1; transform: scale(1.5); }
+					}
+					@keyframes spin-slow {
+						from { transform: rotate(0deg); }
+						to { transform: rotate(360deg); }
+					}
+					.animate-float-orbit {
+						animation: float-orbit 15s ease-in-out infinite;
+					}
+					.animate-twinkle {
+						animation: twinkle 3s ease-in-out infinite;
+					}
+					.animate-spin-slow {
+						animation: spin-slow 20s linear infinite;
+					}
+				`}</style>
+
 				{/* LEGO-стилизованный экран ошибки */}
 				<div className='relative'>
 					<div className='relative bg-white/10 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-red-400/30'>
@@ -114,6 +166,32 @@ export function BlogPage() {
 
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden'>
+			{/* CSS анимации - перенесены в начало основного компонента */}
+			<style>{`
+				@keyframes float-orbit {
+					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+					33% { transform: translateY(-25px) rotate(8deg) scale(1.1); }
+					66% { transform: translateY(-10px) rotate(-5deg) scale(0.9); }
+				}
+				@keyframes twinkle {
+					0%, 100% { opacity: 0.3; transform: scale(1); }
+					50% { opacity: 1; transform: scale(1.5); }
+				}
+				@keyframes spin-slow {
+					from { transform: rotate(0deg); }
+					to { transform: rotate(360deg); }
+				}
+				.animate-float-orbit {
+					animation: float-orbit 15s ease-in-out infinite;
+				}
+				.animate-twinkle {
+					animation: twinkle 3s ease-in-out infinite;
+				}
+				.animate-spin-slow {
+					animation: spin-slow 20s linear infinite;
+				}
+			`}</style>
+
 			{/* Космический LEGO-фон */}
 			<div className='absolute inset-0 pointer-events-none'>
 				{/* Звездное поле */}
@@ -431,32 +509,6 @@ export function BlogPage() {
 					</div>
 				</section>
 			</Container>
-
-			{/* CSS анимации */}
-			<style jsx>{`
-				@keyframes float-orbit {
-					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-					33% { transform: translateY(-25px) rotate(8deg) scale(1.1); }
-					66% { transform: translateY(-10px) rotate(-5deg) scale(0.9); }
-				}
-				@keyframes twinkle {
-					0%, 100% { opacity: 0.3; transform: scale(1); }
-					50% { opacity: 1; transform: scale(1.5); }
-				}
-				@keyframes spin-slow {
-					from { transform: rotate(0deg); }
-					to { transform: rotate(360deg); }
-				}
-				.animate-float-orbit {
-					animation: float-orbit 15s ease-in-out infinite;
-				}
-				.animate-twinkle {
-					animation: twinkle 3s ease-in-out infinite;
-				}
-				.animate-spin-slow {
-					animation: spin-slow 20s linear infinite;
-				}
-			`}</style>
 		</div>
 	)
 }

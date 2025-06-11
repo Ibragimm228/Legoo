@@ -13,10 +13,10 @@ export function FeaturedArticlesSection() {
 				<div className='absolute inset-0 opacity-20'>
 					{/* Звездное поле */}
 					<div className='absolute top-20 left-20 w-1 h-1 bg-yellow-400 rounded-full animate-twinkle'></div>
-					<div className='absolute top-40 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-twinkle delay-1000'></div>
-					<div className='absolute top-60 right-1/4 w-1 h-1 bg-pink-400 rounded-full animate-twinkle delay-2000'></div>
-					<div className='absolute bottom-40 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-twinkle delay-3000'></div>
-					<div className='absolute bottom-20 right-20 w-1 h-1 bg-red-400 rounded-full animate-twinkle delay-4000'></div>
+					<div className='absolute top-40 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-twinkle animate-twinkle-delay-1'></div>
+					<div className='absolute top-60 right-1/4 w-1 h-1 bg-pink-400 rounded-full animate-twinkle animate-twinkle-delay-2'></div>
+					<div className='absolute bottom-40 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-twinkle animate-twinkle-delay-3'></div>
+					<div className='absolute bottom-20 right-20 w-1 h-1 bg-red-400 rounded-full animate-twinkle animate-twinkle-delay-4'></div>
 				</div>
 			</div>
 
@@ -30,14 +30,14 @@ export function FeaturedArticlesSection() {
 					<div className='absolute center-2 center-2 w-6 h-6 bg-white/20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
 				</div>
 			</div>
-			<div className='absolute top-32 right-16 animate-float-slow delay-1000'>
+			<div className='absolute top-32 right-16 animate-float-slow-delay-1'>
 				<div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl shadow-2xl transform -rotate-6 opacity-60'>
 					<div className='absolute top-1 left-3 w-3 h-3 bg-white/40 rounded-full'></div>
 					<div className='absolute top-1 right-3 w-3 h-3 bg-white/40 rounded-full'></div>
 					<div className='absolute bottom-1 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white/30 rounded-full'></div>
 				</div>
 			</div>
-			<div className='absolute bottom-24 left-1/4 animate-float-slow delay-2000'>
+			<div className='absolute bottom-24 left-1/4 animate-float-slow-delay-2'>
 				<div className='w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg shadow-2xl transform rotate-45 opacity-60'>
 					<div className='absolute top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white/40 rounded-full'></div>
 					<div className='absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white/40 rounded-full'></div>
@@ -52,9 +52,9 @@ export function FeaturedArticlesSection() {
 						<div className='relative'>
 							<div className='flex space-x-3'>
 								<div className='w-6 h-6 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full shadow-lg animate-pulse'></div>
-								<div className='w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full shadow-lg animate-pulse delay-200'></div>
-								<div className='w-6 h-6 bg-gradient-to-br from-red-400 to-orange-400 rounded-full shadow-lg animate-pulse delay-400'></div>
-								<div className='w-6 h-6 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full shadow-lg animate-pulse delay-600'></div>
+								<div className='w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full shadow-lg animate-pulse animate-pulse-delay-1'></div>
+								<div className='w-6 h-6 bg-gradient-to-br from-red-400 to-orange-400 rounded-full shadow-lg animate-pulse animate-pulse-delay-2'></div>
+								<div className='w-6 h-6 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full shadow-lg animate-pulse animate-pulse-delay-3'></div>
 							</div>
 							{/* Светящийся эффект */}
 							<div className='absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full opacity-30 blur-lg'></div>
@@ -74,7 +74,7 @@ export function FeaturedArticlesSection() {
 						
 						{/* Декоративные элементы вокруг заголовка */}
 						<div className='absolute -top-8 -left-8 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-ping'></div>
-						<div className='absolute -top-4 -right-12 w-3 h-3 bg-pink-400 rounded-full opacity-60 animate-ping delay-1000'></div>
+						<div className='absolute -top-4 -right-12 w-3 h-3 bg-pink-400 rounded-full opacity-60 animate-ping animate-ping-delay-1'></div>
 					</div>
 
 					{/* Подзаголовок в космическом блоке */}
@@ -131,7 +131,7 @@ export function FeaturedArticlesSection() {
 							<div className='inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl px-6 py-3 border border-cyan-400/30'>
 								<div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse'></div>
 								<h3 className='text-2xl font-bold text-slate-200'>Featured Builds</h3>
-								<div className='w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-500'></div>
+								<div className='w-3 h-3 bg-purple-400 rounded-full animate-pulse animate-pulse-delay-4'></div>
 							</div>
 						</div>
 
@@ -145,7 +145,7 @@ export function FeaturedArticlesSection() {
 											<div className='bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 shadow-xl border border-slate-700/50'>
 												<div className='absolute -top-3 left-6 flex space-x-2'>
 													<div className='w-6 h-6 bg-slate-600 rounded-full animate-pulse'></div>
-													<div className='w-6 h-6 bg-slate-600 rounded-full animate-pulse delay-100'></div>
+													<div className='w-6 h-6 bg-slate-600 rounded-full animate-pulse animate-pulse-delay-1'></div>
 												</div>
 												<ArticleCardSmallSkeleton />
 											</div>
@@ -206,11 +206,11 @@ export function FeaturedArticlesSection() {
 									<span className='text-sm font-medium'>New Reviews</span>
 								</div>
 								<div className='flex items-center space-x-2 text-purple-400'>
-									<div className='w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-200'></div>
+									<div className='w-2 h-2 bg-purple-400 rounded-full animate-pulse animate-pulse-delay-1'></div>
 									<span className='text-sm font-medium'>Build Guides</span>
 								</div>
 								<div className='flex items-center space-x-2 text-pink-400'>
-									<div className='w-2 h-2 bg-pink-400 rounded-full animate-pulse delay-400'></div>
+									<div className='w-2 h-2 bg-pink-400 rounded-full animate-pulse animate-pulse-delay-2'></div>
 									<span className='text-sm font-medium'>MOC Showcases</span>
 								</div>
 							</div>
@@ -219,8 +219,8 @@ export function FeaturedArticlesSection() {
 				</div>
 			</div>
 
-			{/* CSS анимации */}
-			<style jsx>{`
+			{/* CSS анимации - убрали jsx атрибут */}
+			<style>{`
 				@keyframes float-slow {
 					0%, 100% { transform: translateY(0px) rotate(0deg); }
 					50% { transform: translateY(-25px) rotate(5deg); }
@@ -232,8 +232,47 @@ export function FeaturedArticlesSection() {
 				.animate-float-slow {
 					animation: float-slow 8s ease-in-out infinite;
 				}
+				.animate-float-slow-delay-1 {
+					animation: float-slow 8s ease-in-out infinite;
+					animation-delay: 1s;
+				}
+				.animate-float-slow-delay-2 {
+					animation: float-slow 8s ease-in-out infinite;
+					animation-delay: 2s;
+				}
 				.animate-twinkle {
 					animation: twinkle 3s ease-in-out infinite;
+				}
+				.animate-twinkle-delay-1 {
+					animation: twinkle 3s ease-in-out infinite;
+					animation-delay: 1s;
+				}
+				.animate-twinkle-delay-2 {
+					animation: twinkle 3s ease-in-out infinite;
+					animation-delay: 2s;
+				}
+				.animate-twinkle-delay-3 {
+					animation: twinkle 3s ease-in-out infinite;
+					animation-delay: 3s;
+				}
+				.animate-twinkle-delay-4 {
+					animation: twinkle 3s ease-in-out infinite;
+					animation-delay: 4s;
+				}
+				.animate-pulse-delay-1 {
+					animation-delay: 0.2s;
+				}
+				.animate-pulse-delay-2 {
+					animation-delay: 0.4s;
+				}
+				.animate-pulse-delay-3 {
+					animation-delay: 0.6s;
+				}
+				.animate-pulse-delay-4 {
+					animation-delay: 0.5s;
+				}
+				.animate-ping-delay-1 {
+					animation-delay: 1s;
 				}
 			`}</style>
 		</section>

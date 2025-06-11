@@ -35,12 +35,12 @@ export function CategoriesSection() {
 					<div className='absolute top-1 right-1 w-3 h-3 bg-white/30 rounded-full'></div>
 				</div>
 			</div>
-			<div className='absolute top-40 right-16 animate-float delay-1000'>
+			<div className='absolute top-40 right-16 animate-float-delay-1000'>
 				<div className='w-10 h-10 bg-yellow-500 rounded-lg shadow-lg opacity-20 transform -rotate-6'>
 					<div className='absolute top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white/30 rounded-full'></div>
 				</div>
 			</div>
-			<div className='absolute bottom-32 left-1/4 animate-float delay-2000'>
+			<div className='absolute bottom-32 left-1/4 animate-float-delay-2000'>
 				<div className='w-8 h-8 bg-blue-500 rounded-lg shadow-lg opacity-20 transform rotate-45'>
 					<div className='absolute top-1 left-1 w-2 h-2 bg-white/30 rounded-full'></div>
 				</div>
@@ -191,14 +191,22 @@ export function CategoriesSection() {
 				</div>
 			</div>
 
-			{/* CSS для анимации */}
-			<style jsx>{`
+			{/* CSS для анимации - убрали jsx атрибут */}
+			<style>{`
 				@keyframes float {
 					0%, 100% { transform: translateY(0px) rotate(0deg); }
 					50% { transform: translateY(-20px) rotate(5deg); }
 				}
 				.animate-float {
 					animation: float 6s ease-in-out infinite;
+				}
+				.animate-float-delay-1000 {
+					animation: float 6s ease-in-out infinite;
+					animation-delay: 1s;
+				}
+				.animate-float-delay-2000 {
+					animation: float 6s ease-in-out infinite;
+					animation-delay: 2s;
 				}
 			`}</style>
 		</section>

@@ -15,6 +15,28 @@ export function Hero() {
 
 	return (
 		<div className='relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900'>
+			{/* CSS анимации */}
+			<style>{`
+				@keyframes float-mega {
+					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+					33% { transform: translateY(-30px) rotate(5deg) scale(1.05); }
+					66% { transform: translateY(-15px) rotate(-3deg) scale(0.95); }
+				}
+				@keyframes spin-slow {
+					from { transform: rotate(0deg); }
+					to { transform: rotate(360deg); }
+				}
+				.animate-float-mega {
+					animation: float-mega 12s ease-in-out infinite;
+				}
+				.animate-spin-slow {
+					animation: spin-slow 20s linear infinite;
+				}
+				.shadow-3xl {
+					box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+				}
+			`}</style>
+
 			{/* Динамический LEGO-фон */}
 			<div className='absolute inset-0'>
 				{/* Базовое изображение с эффектом */}
@@ -234,28 +256,6 @@ export function Hero() {
 					</div>
 				</div>
 			</Container>
-
-			{/* CSS анимации */}
-			<style jsx>{`
-				@keyframes float-mega {
-					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-					33% { transform: translateY(-30px) rotate(5deg) scale(1.05); }
-					66% { transform: translateY(-15px) rotate(-3deg) scale(0.95); }
-				}
-				@keyframes spin-slow {
-					from { transform: rotate(0deg); }
-					to { transform: rotate(360deg); }
-				}
-				.animate-float-mega {
-					animation: float-mega 12s ease-in-out infinite;
-				}
-				.animate-spin-slow {
-					animation: spin-slow 20s linear infinite;
-				}
-				.shadow-3xl {
-					box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
-				}
-			`}</style>
 		</div>
 	)
 }
