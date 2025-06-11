@@ -3,6 +3,25 @@ import { Container } from '../components/shared/container'
 export function AboutPage() {
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden'>
+			{/* CSS анимации - перенесены в начало */}
+			<style>{`
+				@keyframes float-mega {
+					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+					33% { transform: translateY(-30px) rotate(5deg) scale(1.05); }
+					66% { transform: translateY(-15px) rotate(-3deg) scale(0.95); }
+				}
+				@keyframes twinkle {
+					0%, 100% { opacity: 0.3; transform: scale(1); }
+					50% { opacity: 1; transform: scale(1.5); }
+				}
+				.animate-float-mega {
+					animation: float-mega 12s ease-in-out infinite;
+				}
+				.animate-twinkle {
+					animation: twinkle 3s ease-in-out infinite;
+				}
+			`}</style>
+
 			{/* Космический LEGO-фон */}
 			<div className='absolute inset-0 pointer-events-none'>
 				{/* Звездное поле */}
@@ -336,25 +355,6 @@ export function AboutPage() {
 					</div>
 				</section>
 			</Container>
-
-			{/* CSS анимации */}
-			<style jsx>{`
-				@keyframes float-mega {
-					0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-					33% { transform: translateY(-30px) rotate(5deg) scale(1.05); }
-					66% { transform: translateY(-15px) rotate(-3deg) scale(0.95); }
-				}
-				@keyframes twinkle {
-					0%, 100% { opacity: 0.3; transform: scale(1); }
-					50% { opacity: 1; transform: scale(1.5); }
-				}
-				.animate-float-mega {
-					animation: float-mega 12s ease-in-out infinite;
-				}
-				.animate-twinkle {
-					animation: twinkle 3s ease-in-out infinite;
-				}
-			`}</style>
 		</div>
 	)
 }
