@@ -135,15 +135,17 @@ export function LatestArticlesSection() {
 						</div>
 
 						{/* Сетка с LEGO-стилизацией */}
-						<div className='grid gap-8 lg:grid-cols-2'>
+						<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
 							{isLoading ? (
 								<>
-									{Array.from({ length: 4 }).map((_, index) => {
+									{Array.from({ length: 6 }).map((_, index) => {
 										const colors = [
 											'from-emerald-500/20 to-teal-500/20 border-emerald-400/30',
 											'from-teal-500/20 to-cyan-500/20 border-teal-400/30',
 											'from-cyan-500/20 to-blue-500/20 border-cyan-400/30',
-											'from-blue-500/20 to-purple-500/20 border-blue-400/30'
+											'from-blue-500/20 to-purple-500/20 border-blue-400/30',
+											'from-purple-500/20 to-pink-500/20 border-purple-400/30',
+											'from-pink-500/20 to-rose-500/20 border-pink-400/30'
 										]
 										
 										return (
@@ -167,18 +169,22 @@ export function LatestArticlesSection() {
 									})}
 								</>
 							) : (
-								articles?.slice(3, 7).map((article, index) => {
+								articles?.slice(0, 6).map((article, index) => {
 									const colors = [
 										'from-emerald-500/20 to-teal-500/20 border-emerald-400/30 shadow-emerald-500/20',
 										'from-teal-500/20 to-cyan-500/20 border-teal-400/30 shadow-teal-500/20',
 										'from-cyan-500/20 to-blue-500/20 border-cyan-400/30 shadow-cyan-500/20',
-										'from-blue-500/20 to-purple-500/20 border-blue-400/30 shadow-blue-500/20'
+										'from-blue-500/20 to-purple-500/20 border-blue-400/30 shadow-blue-500/20',
+										'from-purple-500/20 to-pink-500/20 border-purple-400/30 shadow-purple-500/20',
+										'from-pink-500/20 to-rose-500/20 border-pink-400/30 shadow-pink-500/20'
 									]
 									const gradients = [
 										'from-emerald-500 to-teal-500',
 										'from-teal-500 to-cyan-500',
 										'from-cyan-500 to-blue-500',
-										'from-blue-500 to-purple-500'
+										'from-blue-500 to-purple-500',
+										'from-purple-500 to-pink-500',
+										'from-pink-500 to-rose-500'
 									]
 									
 									return (
@@ -204,7 +210,7 @@ export function LatestArticlesSection() {
 												{/* Номер статьи */}
 												<div className='absolute bottom-3 left-3'>
 													<div className={`w-8 h-8 bg-gradient-to-br ${gradients[index]} rounded-lg flex items-center justify-center shadow-lg`}>
-														<span className='text-white font-bold text-sm'>{index + 4}</span>
+														<span className='text-white font-bold text-sm'>{index + 1}</span>
 													</div>
 												</div>
 

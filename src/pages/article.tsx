@@ -75,7 +75,7 @@ export function ArticlePage() {
 					</div>
 
 					{/* Центральный загрузочный блок */}
-					<div className='relative bg-white/10 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-cyan-400/30'>
+					<div className='relative bg-white/90 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-cyan-400/30'>
 						{/* LEGO шипы */}
 						<div className='absolute -top-4 left-1/2 transform -translate-x-1/2 flex space-x-4'>
 							<div className='w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full shadow-lg animate-pulse'></div>
@@ -84,10 +84,10 @@ export function ArticlePage() {
 						</div>
 						
 						<div className='text-center'>
-							<div className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4'>
+							<div className='text-4xl font-black text-black mb-4'>
 								Building Your
 							</div>
-							<div className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-8'>
+							<div className='text-4xl font-black text-black mb-8'>
 								LEGO Experience
 							</div>
 							<Loading />
@@ -168,13 +168,13 @@ export function ArticlePage() {
 				<div className='py-16 relative'>
 					{/* LEGO-брендинг страницы */}
 					<div className='flex justify-center items-center mb-12'>
-						<div className='flex items-center space-x-4 bg-white/10 backdrop-blur-xl rounded-2xl px-8 py-4 border border-cyan-400/30 shadow-2xl'>
+						<div className='flex items-center space-x-4 bg-white/90 backdrop-blur-xl rounded-2xl px-8 py-4 border border-cyan-400/30 shadow-2xl'>
 							<div className='flex space-x-2'>
 								<div className='w-4 h-4 bg-cyan-400 rounded-full animate-pulse'></div>
 								<div className='w-4 h-4 bg-purple-400 rounded-full animate-pulse delay-200'></div>
 								<div className='w-4 h-4 bg-pink-400 rounded-full animate-pulse delay-400'></div>
 							</div>
-							<span className='text-white/90 font-bold text-sm uppercase tracking-wider'>
+							<span className='text-black font-bold text-sm uppercase tracking-wider'>
 								LEGO® Expert Article
 							</span>
 							<div className='flex space-x-1'>
@@ -191,7 +191,7 @@ export function ArticlePage() {
 					<div className='relative mb-12'>
 						<div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl transform rotate-1 scale-105 blur-sm'></div>
 						
-						<div className='relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-cyan-400/30'>
+						<div className='relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-cyan-400/30'>
 							{/* LEGO шипы на заголовке */}
 							<div className='absolute -top-4 left-8 flex space-x-4'>
 								<div className='w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full shadow-lg'></div>
@@ -199,7 +199,9 @@ export function ArticlePage() {
 								<div className='w-8 h-8 bg-gradient-to-br from-pink-400 to-red-500 rounded-full shadow-lg'></div>
 							</div>
 
-							<ArticleHeader article={article} />
+							<div className='text-black'>
+								<ArticleHeader article={article} />
+							</div>
 
 							{/* Светящаяся граница */}
 							<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent rounded-full'></div>
@@ -213,14 +215,16 @@ export function ArticlePage() {
 							<div className='relative group'>
 								<div className='absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur'></div>
 								
-								<div className='relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-blue-400/30 transform group-hover:scale-105 transition-all duration-300'>
+								<div className='relative bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-blue-400/30 transform group-hover:scale-105 transition-all duration-300'>
 									{/* LEGO шипы на навигации */}
 									<div className='absolute -top-3 left-6 flex space-x-2'>
 										<div className='w-6 h-6 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full shadow-lg'></div>
 										<div className='w-6 h-6 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full shadow-lg'></div>
 									</div>
 
-									<ArticleNavigation currentArticle={article} articles={articles} />
+									<div className='text-black'>
+										<ArticleNavigation currentArticle={article} articles={articles} />
+									</div>
 								</div>
 							</div>
 
@@ -228,7 +232,7 @@ export function ArticlePage() {
 							<div className='relative group'>
 								<div className='absolute -inset-3 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-red-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur'></div>
 								
-								<div className='relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-purple-400/30'>
+								<div className='relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-purple-400/30'>
 									{/* LEGO шипы на контенте */}
 									<div className='absolute -top-4 left-12 flex space-x-4'>
 										<div className='w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full shadow-xl'></div>
@@ -247,7 +251,9 @@ export function ArticlePage() {
 										</div>
 									</div>
 
-									<ArticleContent article={article} />
+									<div className='text-black'>
+										<ArticleContent article={article} />
+									</div>
 
 									{/* Декоративная нижняя линия */}
 									<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-64 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-full'></div>
@@ -261,7 +267,7 @@ export function ArticlePage() {
 							<div className='relative group'>
 								<div className='absolute -inset-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur'></div>
 								
-								<div className='relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-green-400/30 transform group-hover:scale-105 transition-all duration-300'>
+								<div className='relative bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-green-400/30 transform group-hover:scale-105 transition-all duration-300'>
 									{/* LEGO шипы на комментариях */}
 									<div className='absolute -top-3 left-6 flex space-x-2'>
 										<div className='w-6 h-6 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full shadow-lg'></div>
@@ -278,7 +284,9 @@ export function ArticlePage() {
 										</div>
 									</div>
 
-									<ArticleComments article={article} />
+									<div className='text-black'>
+										<ArticleComments article={article} />
+									</div>
 								</div>
 							</div>
 
@@ -286,7 +294,7 @@ export function ArticlePage() {
 							<div className='relative group'>
 								<div className='absolute -inset-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur'></div>
 								
-								<div className='relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-yellow-400/30 transform group-hover:scale-105 transition-all duration-300'>
+								<div className='relative bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-yellow-400/30 transform group-hover:scale-105 transition-all duration-300'>
 									{/* LEGO шипы на последних статьях */}
 									<div className='absolute -top-3 left-6 flex space-x-2'>
 										<div className='w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg'></div>
@@ -301,7 +309,9 @@ export function ArticlePage() {
 										</div>
 									</div>
 
-									<ArticleLatest articles={articles} />
+									<div className='text-black'>
+										<ArticleLatest articles={articles} />
+									</div>
 								</div>
 							</div>
 
@@ -309,7 +319,7 @@ export function ArticlePage() {
 							<div className='relative group'>
 								<div className='absolute -inset-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur'></div>
 								
-								<div className='relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-red-400/30 transform group-hover:scale-105 transition-all duration-300'>
+								<div className='relative bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-red-400/30 transform group-hover:scale-105 transition-all duration-300'>
 									{/* LEGO шипы на популярных статьях */}
 									<div className='absolute -top-3 left-6 flex space-x-2'>
 										<div className='w-6 h-6 bg-gradient-to-br from-red-400 to-pink-500 rounded-full shadow-lg'></div>
@@ -326,7 +336,9 @@ export function ArticlePage() {
 										</div>
 									</div>
 
-									<ArticlePopular articles={articles} />
+									<div className='text-black'>
+										<ArticlePopular articles={articles} />
+									</div>
 								</div>
 							</div>
 
@@ -334,7 +346,7 @@ export function ArticlePage() {
 							<div className='relative group'>
 								<div className='absolute -inset-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur'></div>
 								
-								<div className='relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-indigo-400/30 transform group-hover:scale-105 transition-all duration-300'>
+								<div className='relative bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-indigo-400/30 transform group-hover:scale-105 transition-all duration-300'>
 									{/* LEGO шипы на рекомендуемых статьях */}
 									<div className='absolute -top-3 left-6 flex space-x-2'>
 										<div className='w-6 h-6 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full shadow-lg'></div>
@@ -351,7 +363,9 @@ export function ArticlePage() {
 										</div>
 									</div>
 
-									<ArticleFeatured articles={articles} />
+									<div className='text-black'>
+										<ArticleFeatured articles={articles} />
+									</div>
 								</div>
 							</div>
 						</div>
